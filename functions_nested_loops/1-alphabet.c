@@ -17,5 +17,5 @@ int main()
 {
     print_alphabet();  
     // Call the function to test it
-    return 0;
+    return (0);
 }
