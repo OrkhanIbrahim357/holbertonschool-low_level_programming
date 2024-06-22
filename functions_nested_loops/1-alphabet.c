@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void print_alphabet(void) 
+int print_alphabet(void) 
 {
     char letter = 'a';
 
@@ -9,12 +9,13 @@ void print_alphabet(void)
         _putchar(letter);
         letter++;
     }
-    
-    _putchar('\n');  // Print a newline after printing the alphabet
+     _putchar('\n');
+     // Print a newline after printing the alphabet
 }
 
 int main() 
 {
-    print_alphabet();  // Call the function to test it
+    print_alphabet();  
+    // Call the function to test it
     return 0;
 }
