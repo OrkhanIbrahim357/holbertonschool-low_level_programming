@@ -11,11 +11,12 @@ int print_alphabet(void)
     }
      _putchar('\n');
      // Print a newline after printing the alphabet
-}
 
 int main() 
 {
     print_alphabet();  
     // Call the function to test it
     return (0);
+}
+
 }
