@@ -1,18 +1,20 @@
-#include "main.h"
+#include <stdio.h>
 
-/**
- *print_alphabet - the second task
- *
- * Return: Always 0
- */
-void print_alphabet(void)
+void print_alphabet(void) 
 {
-char letter = 'a';
+    char letter = 'a';
 
-while (letter <= 'z')
-{
-_putchar(letter);
-letter++;
+    while (letter <= 'z') 
+    {
+        _putchar(letter);
+        letter++;
+    }
+    
+    _putchar('\n');  // Print a newline after printing the alphabet
 }
-_putchar('\n');
+
+int main() 
+{
+    print_alphabet();  // Call the function to test it
+    return 0;
 }
