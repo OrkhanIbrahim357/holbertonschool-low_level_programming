@@ -1,24 +1,20 @@
 #include "main.h"
 
 /**
-  * print_alphabet_x10 - Make alphabet x10 times
-  *
-  * Return: void
-  */
+ * print_alphabet_x10 - esas funksiya
+ * Return : 0
+ *
+ */
+
 void print_alphabet_x10(void)
 {
-	char c;
-	int i = 0;
+	int sayghac = 0;
+	char herf;
 
-	while (i <= 9)
+	while (sayghac++ <= 9)
 	{
-		for (c = 'a'; c <= 'z'; c++)
-		{
-			_putchar(c);
-		}
-
+		for (herf = 'a'; herf <= 'z'; herf++)
+			_putchar(herf);
 		_putchar('\n');
-
-		i++;
 	}
 }
