@@ -11,5 +11,5 @@ void print_most_numbers(void);
 
 	if (eded != '2' && eded != '4')
 		_putchar(eded);
-	_putchar('/n);
+	_putchar('/n');
 }
