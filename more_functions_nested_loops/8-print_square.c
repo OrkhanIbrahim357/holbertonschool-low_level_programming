@@ -1,24 +1,23 @@
 #include "main.h"
 
 /**
- * print_diagonal - main
- * @n: var 1
+ * print_square - main
+ * @size: var 1
+ * Return: zero
  */
-void print_diagonal(int n)
+void print_square(int size)
 {
-	int xett, space;
+	int en, hundurluk;
 
-	if (n > 0)
+	if (size > 0)
 	{
-		for (xett = 0; xett < n; xett++)
+		for (hundurluk = 0; hundurluk < size; hundurluk++)
 		{
-			for (space = 0; space < xett; space++)
-				_putchar(' ');
-			_putchar('\\');
+			for (en = 0; en < size; en++)
+				_putchar('#');
 
-			if (xett == n - 1)
+			if (hundurluk == size - 1)
 				continue;
-
 			_putchar('\n');
 		}
 	}
