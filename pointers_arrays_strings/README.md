@@ -1,1 +1,1 @@
-Welcome Pointer and arrays
+Welcome Double Pointer and arrays
