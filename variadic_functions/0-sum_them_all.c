@@ -23,8 +23,8 @@ int sum_them_all(const unsigned int n, ...)
 	{
 	topla += va_arg(args, int);
 	}
-	
+
 	va_end(args);
-	
+
 	return (topla);
 }
