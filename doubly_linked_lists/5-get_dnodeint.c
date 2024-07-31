@@ -1,21 +1,22 @@
-#include <stdlib.h>
+#include <stlib.h>
 #include "lists.h"
+
+/**
+ * get_dnodeint_at_index - get node by index
+ * @head: list
+ * @index: index of element
+ * Return: element by index
+ */
 
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	dlistint_t *node;
-	unsigned int i = 0;
+	unsigned int c;
 
-	node = head;
-	while (node != NULL)
+	for (c = 0; c < index && head->next; c++)
 	{
-		if (i == index)
-		{
-			return (node);
-		}
-		node = node->next;
-		i++;
+		head = head->next;
 	}
-
-	return (NULL);
+	if (c < index)
+		return (NULL);
+	return (head);
 }
