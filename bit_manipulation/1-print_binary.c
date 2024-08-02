@@ -14,11 +14,11 @@ void print_helper(unsigned long int n)
 }
 /**
   * print_binary - prints binary represantation of integer
-  * @n: unsigned long integer 
+  * @n: unsigned long integer
   */
 	void print_binary(unsigned long int n)
 {
-	if(!n)
+	if (!n)
 		_putchar('0');
 	print_helper(n);
 }
