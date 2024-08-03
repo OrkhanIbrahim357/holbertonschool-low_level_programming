@@ -1,12 +1,40 @@
 #include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-/**
-  * main - entry point
-  * @ac: argument count
-  * @av: array of argument tokens
-  * Return: 0 on success
-  */
+
+int main(int argc, char *argv[]) {
+    if (argc != 3) {
+        fprintf(stderr, "Kullanım: %s <kaynak_dosya> <hedef_dosya>\n", argv[0]);
+        return 1;
+    }
+
+    FILE *srcFile, *destFile;
+    char ch;
+
+    // Kaynak dosyayı okuma modunda açma
+    srcFile = fopen(argv[1], "r");
+    if (srcFile == NULL) {
+        perror("Kaynak dosya açılamadı");
+        return 1;
+    }
+
+    // Hedef dosyayı yazma modunda açma
+    destFile = fopen(argv[2], "w");
+    if (destFile == NULL) {
+        perror("Hedef dosya açılamadı");
+        fclose(srcFile);
+        return 1;
+    }
+
+    // Kaynak dosyadan okuma ve hedef dosyaya yazma
+    while ((ch = fgetc(srcFile)) != EOF) {
+        fputc(ch, destFile);
+    }
+
+    // Dosyaları kapatma
+    fclose(srcFile);
+    fclose(destFile);
+
+    printf("Dosya başarıyla kopyalandı.\n");
+    return 0;
+}
+
